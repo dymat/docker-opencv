@@ -17,7 +17,8 @@ RUN	cd /opt && \
 
 RUN	mkdir build && \
 	cd build && \
-	cmake -D CMAKE_BUILD_TYPE=RELEASE \
+	cmake 	-D CMAKE_BUILD_TYPE=RELEASE \
+		-D BUILD_NEW_PYTHON_SUPPORT=ON \
 		-D CMAKE_INSTALL_PREFIX=/usr/local \
 		-D INSTALL_C_EXAMPLES=OFF \
 		-D INSTALL_PYTHON_EXAMPLES=ON \
