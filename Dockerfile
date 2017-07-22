@@ -6,10 +6,10 @@ RUN 	apt-get update && \
 
 RUN	pip install numpy
 
-RUN	cd opt && \
+RUN	cd /opt && \
 	git clone https://github.com/opencv/opencv_contrib.git && \
 	git checkout 3.2.0 && \
-	cd .. && \
+	cd /opt && \
 	git clone https://github.com/opencv/opencv.git && \
 	cd opencv && \
 	git checkout 3.2.0
