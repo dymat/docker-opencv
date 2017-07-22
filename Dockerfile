@@ -9,13 +9,13 @@ RUN	pip install numpy
 RUN	cd /opt && \
 	git clone https://github.com/opencv/opencv_contrib.git && \
 	cd opencv_contrib && \
-	git checkout 3.2.0
-	
-RUN	cd /opt && \
+	git checkout 3.2.0 && \	
+	cd /opt && \
 	git clone https://github.com/opencv/opencv.git && \
 	cd opencv && \
 	git checkout 3.2.0 && \
-	mkdir build && \
+
+RUN	mkdir build && \
 	cd build && \
 	cmake -D CMAKE_BUILD_TYPE=RELEASE \
 		-D CMAKE_INSTALL_PREFIX=/usr/local \
