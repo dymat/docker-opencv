@@ -2,7 +2,7 @@ FROM 	ubuntu:16.04
 
 RUN 	apt-get update && \
 	apt-get upgrade -y && \
-	apt-get install -y python python-pip build-essential cmake git pkg-config libjpeg8-dev libtiff5-dev libjasper-dev libpng12-dev libgtk2.0-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libatlas-base-dev gfortran 
+	apt-get install -y python python-pip build-essential cmake git pkg-config libjpeg8-dev libtiff5-dev libjasper-dev libpng12-dev libgtk2.0-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libatlas-base-dev gfortran libavresample-dev libgphoto2-dev 
 
 RUN	pip install numpy
 
