@@ -13,7 +13,7 @@ RUN	cd /opt && \
 	cd /opt && \
 	git clone https://github.com/opencv/opencv.git && \
 	cd opencv && \
-	git checkout 3.2.0 && \
+	git checkout 3.2.0 
 
 RUN	mkdir build && \
 	cd build && \
