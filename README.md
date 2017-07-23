@@ -13,6 +13,6 @@ In your python script simply import OpenCV `import cv2`.
 
 ### Use Camera
 
-`$ xhost +local:   # (optional) for watching cv.imshow()`
+`$ xhost +local:   # (optional) for displaying images with cv.imshow()`
 
 `$ docker run -it --rm --device=/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY -v ~/myscripts/:/data dymat/opencv python /data/video.py`
