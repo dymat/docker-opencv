@@ -12,5 +12,7 @@ Docker image based on Ubuntu 16.04 with python 2.7 and compiled opencv 3.2.0 wit
 In your python script simply import OpenCV `import cv2`.
 
 ### Use Camera
+
 `$ xhost +local:   # (optional) for watching cv.imshow()`
+
 `$ docker run -it --rm --device=/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY -v ~/myscripts/:/data dymat/opencv python /data/video.py`
