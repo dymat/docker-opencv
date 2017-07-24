@@ -16,3 +16,10 @@ In your python script simply import OpenCV `import cv2`.
 `$ xhost +local:   # (optional) for displaying images with cv.imshow()`
 
 `$ docker run -it --rm --device=/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY -v ~/myscripts/:/data dymat/opencv python /data/video.py`
+
+
+### Use on ARM-Architectures
+
+If you want to use this image on ARM-Architectures use `dymat/opencv:arm32v7`, which is based on `arm32v7/ubuntu` and compiled on Raspberry Pi 3 (ARMv7).
+
+`$ docker pull dymat/opencv:arm32v7`
