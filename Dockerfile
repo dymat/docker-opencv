@@ -1,9 +1,8 @@
-FROM 	ubuntu:16.04
+FROM 	arm32v7/ubuntu:16.04
 
 RUN 	apt-get update && \
 	apt-get upgrade -y && \
-	apt-get install -y --no-install-recommends python python-dev python-pip build-essential cmake git pkg-config libjpeg8-dev libtiff5-dev libjasper-dev libpng12-dev libgtk2.0-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libatlas-base-dev gfortran libavresample-dev libgphoto2-dev libgstreamer-plugins-base1.0-dev libdc1394-22-dev  && \
-	pip install numpy && \
+	apt-get install -y python python-dev python-numpy build-essential cmake git pkg-config libjpeg8-dev libtiff5-dev libjasper-dev libpng12-dev libgtk2.0-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libatlas-base-dev gfortran libavresample-dev libgphoto2-dev libgstreamer-plugins-base1.0-dev libdc1394-22-dev  && \
 	cd /opt && \
 	git clone https://github.com/opencv/opencv_contrib.git && \
 	cd opencv_contrib && \
@@ -25,7 +24,7 @@ RUN 	apt-get update && \
 	make -j4 && \
 	make install && \
 	ldconfig && \
-	apt-get purge -y git && \
+	apt-get purge -y git build-essential cmake && \
 	apt-get clean && rm -rf /var/lib/apt/lists/* && \
 	rm -rf /opt/opencv*
 
