@@ -17,6 +17,11 @@ In your python script simply import OpenCV `import cv2`.
 
 `$ docker run -it --rm --device=/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY -v ~/myscripts/:/data dymat/opencv python /data/video.py`
 
+# Version built with CUDA
+
+If you need OpenCV with CUDA support:
+
+`$ docker pull dymat/opencv:cuda`
 
 # Use on ARM-Architectures
 
