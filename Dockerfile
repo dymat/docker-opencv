@@ -7,11 +7,11 @@ RUN 	apt-get update && \
 	cd /opt && \
 	git clone https://github.com/opencv/opencv_contrib.git && \
 	cd opencv_contrib && \
-	git checkout 3.2.0 && \	
+	git checkout 3.4.0 && \	
 	cd /opt && \
 	git clone https://github.com/opencv/opencv.git && \
 	cd opencv && \
-	git checkout 3.2.0 && \
+	git checkout 3.4.0 && \
 	mkdir build && \
 	cd build && \
 	cmake 	-D CMAKE_BUILD_TYPE=RELEASE \
@@ -22,7 +22,7 @@ RUN 	apt-get update && \
 		-D OPENCV_EXTRA_MODULES_PATH=/opt/opencv_contrib/modules \
 		-D PYTHON_EXECUTABLE=/usr/bin/python2.7 \
 		-D BUILD_EXAMPLES=OFF /opt/opencv && \
-	make -j4 && \
+	make -j $(nproc) && \
 	make install && \
 	ldconfig && \
 	apt-get purge -y git && \
