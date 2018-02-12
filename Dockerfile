@@ -7,11 +7,11 @@ RUN 	apt-get update && \
 	cd /opt && \
 	git clone https://github.com/opencv/opencv_contrib.git && \
 	cd opencv_contrib && \
-	git checkout 3.2.0 && \	
+	git checkout 3.4.0 && \	
 	cd /opt && \
 	git clone https://github.com/opencv/opencv.git && \
 	cd opencv && \
-	git checkout 3.2.0 && \
+	git checkout 3.4.0 && \
 	mkdir build && \
 	cd build && \
 	cmake 	-D CMAKE_BUILD_TYPE=RELEASE \
