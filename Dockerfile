@@ -1,4 +1,6 @@
-FROM 	arm32v7/ubuntu:16.04
+FROM 	multiarch/ubuntu-debootstrap:armhf-xenial
+
+COPY sources.list /etc/apt/
 
 RUN 	apt-get update && \
 	apt-get upgrade -y && \
